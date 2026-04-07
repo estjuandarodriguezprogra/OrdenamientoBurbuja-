@@ -2,28 +2,32 @@ package correccionoredenamiento;
 
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Random;
 
 public class Ordenamiento {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
 
         // Pedir tamaño del arreglo
-        System.out.print("Ingrese el tamaño del arreglo: ");
+        System.out.print("Ingrese la cantidad de números: ");
         int n = sc.nextInt();
 
         int arr[] = new int[n];
 
-        // Llenar el arreglo
-        System.out.println("Ingrese los elementos:");
+        // Generar números aleatorios
         for (int i = 0; i < n; i++) {
-            System.out.print("Elemento [" + i + "]: ");
-            arr[i] = sc.nextInt();
+            arr[i] = rand.nextInt(201) - 100; // números entre -100 y 100
         }
+
+        // Mostrar arreglo original
+        System.out.println("Arreglo generado:");
+        System.out.println(Arrays.toString(arr));
 
         // Ordenar
         ordenar(arr);
 
-        // Mostrar resultado
+        // Mostrar arreglo ordenado
         System.out.println("Arreglo ordenado:");
         System.out.println(Arrays.toString(arr));
     }
