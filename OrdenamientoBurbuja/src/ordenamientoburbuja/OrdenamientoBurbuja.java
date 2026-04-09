@@ -1,20 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ordenamientoburbuja;
 
-/**
- *
- * @author Admin
- */
+import java.util.Arrays;
+
 public class OrdenamientoBurbuja {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int[] arr = {45, 22, 11, -4, 7, 3};
+
+        System.out.println(Arrays.toString(arr));
+
+        // Ordenamiento burbuja
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] > arr[j]) {
+                    int aux = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = aux;
+                }
+            }
+        }
+
+        // Mostrar el arreglo ordenado
+        System.out.println(Arrays.toString(arr));
     }
-    
 }
