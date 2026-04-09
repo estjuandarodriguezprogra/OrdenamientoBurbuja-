@@ -1,5 +1,5 @@
 package ordenamientoburbuja;
-
+//Juan David Rodriguez 
 import java.util.Arrays;
 
 public class OrdenamientoBurbuja {
